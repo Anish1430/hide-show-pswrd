@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Show Hide Using JavaScript</title>
+        <link rel="stylesheet" type="text/css" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css">
+                * {
+                padding: 15px;
+                margin: 10px;
+                box-sizing:0;
+                border-box:0;
+            }
+            body {
+                width: 100%;
+                height: 100%;
+                background: #262626;
+                color: white;
+                display: grid;
+                place-items: center;
+                overflow: hidden;
+            }
+            input {
+                padding: 10px;
+                border-radius: 8px;
+                outline: none;
+                margin-right: 10px;
+                border: 2px solid #e84393;
+                background: transparent;
+                color: white;
+            }
+            i {
+                cursor: pointer;
+                color: red;
+                padding: 10px;
+            }
+            </style>
+    </head>
+    <body>
+        <form>
+        <input id="pswrd" type="password" name="" placeholder="Password">
+        <i class="fa fa-lock" onclick="show()"> Show</i>
+        </form>
+        <script type="text/javascript">
+            function show() {
+
+            var pswrd=document.getElementById('pswrd');
+            var icon=document.querySelector('.fa-lock');
+            if(pswrd.type==="password") {
+                pswrd.type="text";
+                icon.style.color="#e84393";
+            }
+            else {
+                pswrd.type="password";
+                icon.style.color="black";
+            }
+        }
+        </script>
+    </body>
+</html>
